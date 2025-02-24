@@ -1,0 +1,26 @@
+<template>
+    <!-- Dropdown for Project Selection -->
+    <lightning-combobox
+        label="Budget Tracker for this Disbursement"
+        placeholder="Choose a project"
+        options={projectOptions}
+        onchange={handleProjectChange}>
+    </lightning-combobox>
+
+    <!-- Display Project Details -->
+    <template if:true={selectedProject}>
+        <div class="project-details">
+            <h3>Project Details</h3>
+            <p><strong>Project No.:</strong> {selectedProject.number}</p>
+            <p><strong>Project Name:</strong> {selectedProject.name}</p>
+            <p><strong>Funding Allocated:</strong> ${selectedProject.funding}</p>
+            <p><strong>Total Expenditure:</strong> ${selectedProject.expenditure}</p>
+            <p><strong>Remaining Budget:</strong> ${selectedProject.remainingBudget}</p>
+        </div>
+    </template>
+
+    <!-- Message When No Project is Selected -->
+    <template if:false={selectedProject}>
+        <p>Please select a project to see its details.</p>
+    </template>
+</template>

@@ -1,0 +1,24 @@
+.project-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-details h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.project-details p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+lightning-combobox {
+    margin-bottom: 1rem;        
+}
